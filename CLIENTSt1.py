@@ -1,11 +1,8 @@
 import socket
-
-
-
-HEADER=64  ##the first megssege of message sent should be at least 64 bytes that would carry the length of the message that would be next
-PORT =8080
-SERVER= socket.gethostbyname(socket.gethostname())
-ADDR=(SERVER , PORT)
+HEADER=64
+PORT =9696
+SERVER= "192.168.56.1"
+ADDR=(SERVER ,PORT)
 FORMAT='utf-8'
 DISCONNECT_MESSAGE="!DISCONNECTED"
 
@@ -22,5 +19,5 @@ def send(msg):
     client.send(message)
 
 send("hello there!")
-send("hi tim")
+
 
